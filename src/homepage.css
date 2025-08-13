@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  font-family: "Comic Neue";
+  padding: 0px;
+  margin: 0px;
+}
+
+.main {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.nav {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.display {
+  flex: 2;
+
+}
+
+img {
+  width: 30px;
+}
+#add-container img {
+  width: 30px;
+
+}
+ 
+#add-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+}
+
+.nav {
+  background-color: gray;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center
+}
+
+.top div {
+   padding: 10px 5px;
+}
+
+.active {
+  color: red;
+  background-color: rgb(199, 0, 0)
+  
+}
+
+
+
+
+
+
+.circle {
+  height: 22.5px;
+  width: 22.5px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: inline-block;
+
+}
+
+.display h1 {
+  margin-bottom: 5px;
+}
+
+
+
+.list-element-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.top-portion {
+  display: flex;
+  gap: 8px;
+
+  
+}
+
+
+#item-title {
+  font-size: 17.5px;
+   width: 600px;
+}
+
+.item-date {
+white-space: nowrap;
+}
+#item-description {
+  margin-left: 31px;
+  font-size: 13px;
+  width: 600px;
+color: purple;
+}
+
+.list-element {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.Low {
+  width: 75px;
+  padding: 10px;
+  text-align: center;
+  background-color: green;
+}
+
+.Medium {
+     width: 75px;
+       padding: 10px;
+  text-align: center;
+  background-color: yellow;
+}
+
+.High {
+  width: 75px;
+  padding: 10px;
+  text-align: center;
+  background-color: red;
+}
+
+.project-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.display-title {
+  margin-bottom: 100px;
+}
+
+
+
+.add-space {
+  margin-top: 15px;
+}
+
+.priority-button, #add-item-button {
+  cursor: pointer;
+  width: 96px;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(17,27,62);
+}
+
+.selected {
+  background-color: rgb(75, 103, 213);
+
+}
+
+#add-item-button{
+  margin-top: 20px;
+   
+}
+
+.circle-clicked {
+  background-color: red;
+}

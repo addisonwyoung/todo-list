@@ -1,0 +1,29 @@
+dialog {
+  padding: 50px;
+  border: none;
+  border-radius: 12px;
+  margin-left: 35%;
+  margin-top:150px;
+
+
+}
+
+input[type="textarea"] {
+  border: none;
+
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+dialog input {
+  border: none;
+
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: rgb(224, 232, 232);
+  border-radius: 5px;
+  width: 300px;
+}

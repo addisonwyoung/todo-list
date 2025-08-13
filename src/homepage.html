@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Exile&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <div class="nav">
+      <div id="add-container">
+        <img src="add_icon.png" alt="">
+        <div>Add Task</div>
+      </div>
+      <div class="top">
+        <div class="top-item active">Today</div>
+        <div class="top-item">Week</div>
+      </div>
+      
+
+      <div class="projects-container">
+        <div class="project-title">Projects</div>
+        <div class="projects">
+            <div class="project-item">Fitness</div>
+           <div class="project-item">Groceries</div>
+        </div>
+      
+      </div>
+     
+    </div>
+
+
+    <div class="display">
+      <h1 class="display-title">Groceries</h1>
+
+      <div class="list-element-container">
+         
+      </div>
+
+       
+      
+    
+      <div class="add-item">
+        <div style="display: flex; align-items: center;">
+           
+           <img src="add_icon.png" alt=""> 
+            <p>Add Item</p>
+        </div>
+      </div>
+
+      <dialog>
+        <div class="row">
+            <input id="name" type="text" id="name" placeholder="Title">
+        </div>
+        <div class="row">
+  
+        <input type="text" id="description" placeholder="Description">
+        </div>
+        <div class="row">
+        <input type="date" id="date">
+        </div>
+       
+        <div class="priority">
+          <button class="lowprio priority-button">
+            Low
+          </button>
+          <button class="med priority-button">
+            Medium
+          </button>
+          <button class="high priority-button">
+            High
+          </button>
+        </div>
+        <div>
+            <button id="add-item-button" autofocus>Add</button>
+        </div>
+
+     
+      </dialog>
+
+
+
+
+    </div>
+  </div>
+</body>
+</html>
