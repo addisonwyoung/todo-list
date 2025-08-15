@@ -1,12 +1,12 @@
 export class Item {
-  constructor(name, description, dueDate, priority)
+  constructor(title, description, dueDate, priority, category, id)
   {
-    this.name = name;
+    this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    
-   
+    this.done = false;
+    this.id = id;
   }
 }
 

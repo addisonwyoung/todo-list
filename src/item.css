@@ -1,0 +1,51 @@
+.Low {
+  width: 75px;
+  padding: 10px;
+  text-align: center;
+  background-color: green;
+}
+
+.Medium {
+     width: 75px;
+       padding: 10px;
+  text-align: center;
+  background-color: yellow;
+}
+
+.High {
+  width: 75px;
+  padding: 10px;
+  text-align: center;
+  background-color: red;
+}
+
+.priority-button, #add-item-button {
+  cursor: pointer;
+  width: 96px;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgb(17,27,62);
+}
+
+.selected {
+  background-color: rgb(75, 103, 213);
+
+}
+
+#add-item-button{
+  margin-top: 20px;
+   
+}
+
+.true {
+  background-color: red;
+}
+.status {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.list-element-container input {
+  background-color: #ececec;
+}

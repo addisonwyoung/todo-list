@@ -1,30 +1,46 @@
-import { Item } from "./item.js"
-import { add, parseHTML } from "./storage.js"
-import {configDelete, configPriority, configCircle} from "./homepage-ui.js"
+import {parseHTML, parseNavHTML} from "./dom.js"
+import { add, setList } from "./storage.js"
+import {configPriority, configurateAll} from "./init_item.js"
+import {configNav, configAdding, configDelete, configAllNav} from "./nav.js"
+import {lists} from "./storage.js"
+import { todayAsInputValue } from "./date.js"
 import "./homepage.css";
 import "./dialog.css"
+import "./nav.css"
+import "./item.css"
+import { isToday } from "date-fns";
 
-
-
-
+console.log("hi");
+console.log('BOOT @', new Date().toISOString());
 
 const dialog = document.querySelector("dialog");
 const showButton = document.querySelector(".add-item");
 const closeButton = document.querySelector("#add-item-button");
 
-// "Show the dialog" button opens the dialog modally
+const parsedLists = JSON.parse(localStorage.getItem('local'));
+let saved = false;
+
+if(parsedLists === null)
+{
+ 
+}
+else
+{
+  setList(parsedLists);
+  saved = true;
+}
+
+export let state = { category: Object.keys(lists)[0] }
+
+// Object.assign(globalThis, { lists, parsedLists, state, test });
+
 showButton.addEventListener("click", () => {
   dialog.showModal();
 });
 
-// "Close" button closes the dialog
-// the main magic happens here
-configPriority();
-
 closeButton.addEventListener("click", () => {
 
 
-  let category = document.querySelector('.display-title').textContent;
   let title = document.querySelector('#name').value;
   let description = document.querySelector('#description').value;
   let dueDate = document.querySelector('#date').value;
@@ -44,18 +60,16 @@ closeButton.addEventListener("click", () => {
   {
     priority = "High";
   }
-  if(title === "" || description === "" || dueDate === "" || priority === "")
+  if(title === "" || priority === "")
   {
     return;
   }
     dialog.close();
 
-  add(title, description, dueDate, priority, category);
-  let html = parseHTML(category);
+  add(title, description, dueDate, priority, state.category);
+  parseHTML();
+  configurateAll();
 
-  document.querySelector(".list-element-container").innerHTML = html;
-  configDelete(category);
-  configCircle();
   document.querySelector('#name').value = "";
    document.querySelector('#description').value = "";
    document.querySelector('#date').value = "";
@@ -65,3 +79,19 @@ closeButton.addEventListener("click", () => {
       high.classList.remove("selected");
 });
 
+initialPageLoad();
+
+
+
+
+
+
+
+function initialPageLoad()
+{
+    parseHTML();
+  configPriority();
+  document.querySelector('.projects').innerHTML = parseNavHTML();
+  configAllNav();
+  configurateAll();
+}

@@ -6,7 +6,7 @@
 }
 
 .main {
-  margin-top: 50px;
+
   display: flex;
   gap: 30px;
 }
@@ -17,27 +17,23 @@
 }
 
 .display {
-  flex: 2;
-
+  flex: 3;
+  background-color: #ececec;
+    padding: 10px 20px;
+    height: 100vh;
 }
 
 img {
   width: 30px;
 }
-#add-container img {
-  width: 30px;
 
-}
- 
-#add-container {
+
+#front-title {
   display: flex;
-  gap: 5px;
-  align-items: center;
-
-}
-
-.nav {
-  background-color: gray;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
 }
 
 .top {
@@ -112,7 +108,7 @@ color: purple;
 .list-element {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
 }
 
 .left {
@@ -131,61 +127,25 @@ color: purple;
   cursor: pointer;
 }
 
-.Low {
-  width: 75px;
-  padding: 10px;
-  text-align: center;
-  background-color: green;
+
+
+
+/* one tiny, respectful animation */
+@keyframes fadeInMicro {
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: none; }
 }
 
-.Medium {
-     width: 75px;
-       padding: 10px;
-  text-align: center;
-  background-color: yellow;
+/* class we (re)apply to trigger it */
+.fade-in-animate {
+  animation: fadeInMicro .18s ease-out;
 }
 
-.High {
-  width: 75px;
-  padding: 10px;
-  text-align: center;
-  background-color: red;
+/* allow opting out anywhere */
+.no-global-fade, .no-global-fade * { animation: none !important; }
+
+/* accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-animate { animation: none !important; }
 }
 
-.project-title {
-  font-weight: bold;
-  font-size: 24px;
-}
-
-.display-title {
-  margin-bottom: 100px;
-}
-
-
-
-.add-space {
-  margin-top: 15px;
-}
-
-.priority-button, #add-item-button {
-  cursor: pointer;
-  width: 96px;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  background-color: rgb(17,27,62);
-}
-
-.selected {
-  background-color: rgb(75, 103, 213);
-
-}
-
-#add-item-button{
-  margin-top: 20px;
-   
-}
-
-.circle-clicked {
-  background-color: red;
-}
