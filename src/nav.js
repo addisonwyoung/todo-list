@@ -14,7 +14,7 @@ export function configNav()
   
 document.querySelectorAll('.project-item').forEach((item) => {
   item.addEventListener('click', () => {
-    document.querySelector('#add-item-button').classList.remove('hide');
+   // document.querySelector('#add-item-button').classList.remove('hide');
 
     document.querySelectorAll('.project-item').forEach( (i) => {
       i.classList.remove('project-selected');
@@ -38,7 +38,7 @@ document.querySelectorAll('.project-item').forEach((item) => {
 
 
   document.querySelectorAll('.filter-category').forEach( (item) => {
-    document.querySelector('#add-item-button').classList.add('hide');
+ //   document.querySelector('#add-item-button').classList.add('hide');
     item.addEventListener('click', () => {
 
          document.querySelectorAll('.project-item').forEach( (i) => {

@@ -32,7 +32,7 @@ else
 
 export let state = { category: Object.keys(lists)[0] }
 
-// Object.assign(globalThis, { lists, parsedLists, state, test });
+Object.assign(globalThis, { lists, parsedLists, state });
 
 showButton.addEventListener("click", () => {
   dialog.showModal();
@@ -89,6 +89,7 @@ initialPageLoad();
 
 function initialPageLoad()
 {
+  document.querySelector('.display-title').textContent = state.category;
     parseHTML();
   configPriority();
   document.querySelector('.projects').innerHTML = parseNavHTML();
