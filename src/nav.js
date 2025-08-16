@@ -14,7 +14,7 @@ export function configNav()
   
 document.querySelectorAll('.project-item').forEach((item) => {
   item.addEventListener('click', () => {
-   // document.querySelector('#add-item-button').classList.remove('hide');
+  // document.querySelector('.add-item').classList.remove('hide');
 
     document.querySelectorAll('.project-item').forEach( (i) => {
       i.classList.remove('project-selected');
@@ -38,7 +38,7 @@ document.querySelectorAll('.project-item').forEach((item) => {
 
 
   document.querySelectorAll('.filter-category').forEach( (item) => {
- //   document.querySelector('#add-item-button').classList.add('hide');
+ //  document.querySelector('.add-item').classList.add('hide');
     item.addEventListener('click', () => {
 
          document.querySelectorAll('.project-item').forEach( (i) => {
@@ -100,6 +100,7 @@ document.querySelectorAll('.project-item').forEach((item) => {
        
       }
       document.querySelector('.list-element-container').innerHTML = html;
+
     }
      
     
@@ -121,6 +122,7 @@ document.querySelector('#cancel').addEventListener('click', () => {
 
 document.querySelector('#padd').addEventListener('click', () => {
    
+   //  document.querySelector('.add-item').classList.remove('hide');
   let name = document.querySelector('#proj-input').value;
   if(name === "") {
     return;
